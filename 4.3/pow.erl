@@ -16,7 +16,7 @@
 
 %%  @doc Returns X to the Nth power in a non-tail recursive fashion
 
-raise(_X, N) when N =:= 0 -> 1;
-raise(X, N) when N =:= 1 -> X;
-raise(X, N) when N > 0   -> X * raise(X, N-1);
-raise(X, N)              -> 1.0 / raise(X, abs(N)).
+raise(_X,N)  when N =:= 0 -> 1;
+raise(X, N)  when N =:= 1 -> X;
+raise(X, N)  when N > 0   -> X * raise(X, N-1);
+raise(X, N)               -> 1.0 / raise(X, abs(N)).
